@@ -23,6 +23,9 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link fs-5 text-light" to="/contact">Contact</NavLink>
                             </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link fs-5 text-light" to="/show">Enquiry</NavLink>
+                            </li>
                         </ul>
                     </div>
                 </div>

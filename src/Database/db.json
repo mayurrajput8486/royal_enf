@@ -1,8 +1,31 @@
 {
-    "customer":[
-        {
-            "id" : 101,
-            "cust_name" : "Virat Kohli"
-        }
-    ]
+  "customer": [
+    {
+      "id": "eba5",
+      "full_name": "Virat Kohli",
+      "email": "vk18@gmail.com",
+      "contact": "7744556633",
+      "address": "Karve Nagar, Pune ",
+      "branch": "Shivaji Nagar, Pune",
+      "visit_date": "2025-04-16"
+    },
+    {
+      "id": "3f7a",
+      "full_name": "Rohit Sharma",
+      "email": "rohit@gmail.com",
+      "contact": "7744112233",
+      "address": "Warje, Pune",
+      "branch": "Koregaon Park, Pune",
+      "visit_date": "2025-04-17"
+    },
+    {
+      "id": "f557",
+      "full_name": "Hardik",
+      "email": "hardik@gmail.com",
+      "contact": "7719090215",
+      "address": "Karve Nagar, Pune",
+      "branch": "Viman Nagar, Pune",
+      "visit_date": "2025-04-20"
+    }
+  ]
 }

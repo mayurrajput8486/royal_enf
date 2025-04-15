@@ -9,6 +9,7 @@ import Service from './components/Pages/Service.jsx'
 import About from './components/Pages/About.jsx'
 import ErrorPage from './components/Pages/ErrorPage.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import Enqdetails from './components/Pages/Enqdetails.jsx'
 const App = () => {
   return (
     <div>
@@ -20,6 +21,7 @@ const App = () => {
             <Route path='/about' element={<About/>}></Route>
             <Route path='/service' element={<Service/>}></Route>
             <Route path='/contact' element={<Contact/>}></Route>
+            <Route path='/show' element={<Enqdetails/>}></Route>
             <Route path='*' element={<ErrorPage/>}></Route>
         </Routes>
       </BrowserRouter>
