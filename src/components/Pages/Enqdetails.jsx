@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { NavLink } from 'react-router-dom'
 
 const Enqdetails = () => {
 
@@ -21,8 +22,8 @@ const Enqdetails = () => {
         getData()
     }, [])
   return (
-    <div>
-        <h2>Enquiry Details - </h2>
+    <div style={{height : '500px'}}>
+        <h2 className='text-center'>Enquiry Details</h2>
         <table className='table table-dark mt-5'>
             <thead>
                 <tr>
@@ -33,6 +34,7 @@ const Enqdetails = () => {
                     <th>Address</th>
                     <th>Branch</th>
                     <th>Date</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,6 +49,10 @@ const Enqdetails = () => {
                                 <td>{c.address}</td>
                                 <td>{c.branch}</td>
                                 <td>{c.visit_date}</td>
+                                <td>
+                                    <NavLink to={`/update/${c.id}`}><button className='btn btn-success me-3'>Edit</button></NavLink>
+                                    <button className='btn btn-danger'>Delete</button>
+                                </td>
                             </tr>
                         )
                     })
