@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 const Enqdetails = () => {
 
     const [cust, setCust] = useState([])
+    const [search, setSearch ] = useState('')
     const getData = async () =>{
         try{
             const response = await axios.get("http://localhost:8000/customer")
@@ -21,9 +22,22 @@ const Enqdetails = () => {
     useEffect(()=>{
         getData()
     }, [])
+
+    const searchData = cust.filter((c)=>{
+        return c.branch.toLowerCase().includes(search.toLowerCase())
+    })
   return (
     <div style={{height : '500px'}}>
         <h2 className='text-center'>Enquiry Details</h2>
+        <div className='bg-dark p-3 w-50 mx-auto rounded-3'>
+            <input 
+                type='text'
+                className='form-control w-50 mx-auto'
+                placeholder='Enter Name'
+                value={search}
+                onChange={(event)=>setSearch(event.target.value)}
+            />
+        </div>
         <table className='table table-dark mt-5'>
             <thead>
                 <tr>
@@ -39,7 +53,7 @@ const Enqdetails = () => {
             </thead>
             <tbody>
                 {
-                    cust.map((c,index)=>{
+                    searchData.map((c,index)=>{
                         return(
                             <tr key={index}>
                                 <td>{index + 1}</td>
@@ -51,7 +65,7 @@ const Enqdetails = () => {
                                 <td>{c.visit_date}</td>
                                 <td>
                                     <NavLink to={`/update/${c.id}`}><button className='btn btn-success me-3'>Edit</button></NavLink>
-                                    <button className='btn btn-danger'>Delete</button>
+                                    <NavLink to={`/delete/${c.id}`}><button className='btn btn-danger'>Delete</button></NavLink>
                                 </td>
                             </tr>
                         )
