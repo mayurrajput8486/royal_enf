@@ -37,6 +37,9 @@ const Enqdetails = () => {
                 value={search}
                 onChange={(event)=>setSearch(event.target.value)}
             />
+            <div className='fw-bold text-light text-center'>
+                {search}
+            </div>
         </div>
         <table className='table table-dark mt-5'>
             <thead>
@@ -73,6 +76,9 @@ const Enqdetails = () => {
                 }
             </tbody>
         </table>
+        <div className='text-center'>
+            <NavLink to='/admin'><button className='btn btn-danger w-50'>Logout</button></NavLink>
+        </div>
     </div>
   )
 }

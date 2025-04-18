@@ -12,6 +12,7 @@ import Footer from './components/Footer/Footer.jsx'
 import Enqdetails from './components/Pages/Enqdetails.jsx'
 import Update from './components/Pages/Update.jsx'
 import Delete from './components/Pages/Delete.jsx'
+import Admin from './components/Pages/Admin.jsx'
 const App = () => {
   return (
     <div>
@@ -26,6 +27,7 @@ const App = () => {
             <Route path='/show' element={<Enqdetails/>}></Route>
             <Route path='/update/:customerid' element={<Update/>}></Route>
             <Route path='/delete/:customerid' element={<Delete/>}></Route>
+            <Route path='/admin' element={<Admin/>}></Route>
             <Route path='*' element={<ErrorPage/>}></Route>
         </Routes>
       </BrowserRouter>
